@@ -42,5 +42,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README TODO USAGE INSTALL
+%doc README TODO USAGE INSTALL pam_radius_auth.conf
 %attr(755,root,root) /lib/security/pam_radius_auth.so
