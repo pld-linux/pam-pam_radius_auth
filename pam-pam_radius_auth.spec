@@ -1,4 +1,4 @@
-%define 	modulename pam_radius
+%define 	modulename	pam_radius
 Summary:	PAM module - authenticate using RADIUS server
 Summary(pl):	Modu³ PAM pozwalaj±cy na u¿ycie serwera RADIUS do uwierzytelniania
 Name:		pam-%{modulename}_auth
