@@ -10,6 +10,7 @@ Source0:	ftp://ftp.freeradius.org/pub/radius/%{modulename}-%{version}.tar
 # Source0-md5:	633d57c7035671fe7655158e37633db7
 URL:		http://www.freeradius.org/pam_radius_auth/
 BuildRequires:	pam-static > 0.77.3-2
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,14 +29,18 @@ uwierzytelnienia niezbêdny jest serwer RADIUS.
 %prep
 %setup -q -n %{modulename}-%{version}
 
+sed -i -e 's/ld -Bshareable/$(CC) -shared/' Makefile
+
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -fPIC -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/security
+install -d $RPM_BUILD_ROOT/%{_lib}/security
 
-install pam_radius_auth.so $RPM_BUILD_ROOT%{_libdir}/security
+install pam_radius_auth.so $RPM_BUILD_ROOT/%{_lib}/security
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -43,4 +48,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README TODO USAGE INSTALL pam_radius_auth.conf
-%attr(755,root,root) %{_libdir}/security/pam_radius_auth.so
+%attr(755,root,root) /%{_lib}/security/pam_radius_auth.so
