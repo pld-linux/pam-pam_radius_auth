@@ -9,7 +9,7 @@ Group:		Networking
 Source0:	ftp://ftp.freeradius.org/pub/radius/%{modulename}-%{version}.tar
 # Source0-md5:	633d57c7035671fe7655158e37633db7
 URL:		http://www.freeradius.org/pam_radius_auth/
-BuildRequires:	pam-static > 0.77.3-2
+BuildRequires:	pam-devel > 0.77.3-2
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
