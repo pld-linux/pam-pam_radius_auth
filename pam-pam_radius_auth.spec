@@ -33,9 +33,9 @@ uwierzytelnienia niezbêdny jest serwer RADIUS.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_lib}/security
+install -d $RPM_BUILD_ROOT%{_libdir}/security
 
-install pam_radius_auth.so $RPM_BUILD_ROOT%{_lib}/security
+install pam_radius_auth.so $RPM_BUILD_ROOT%{_libdir}/security
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -43,4 +43,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README TODO USAGE INSTALL pam_radius_auth.conf
-%attr(755,root,root) %{_lib}/security/pam_radius_auth.so
+%attr(755,root,root) %{_libdir}/security/pam_radius_auth.so
