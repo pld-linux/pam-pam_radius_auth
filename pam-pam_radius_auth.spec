@@ -19,7 +19,7 @@ requests. You will need a RADIUS server to perform the actual
 authentication.
 
 %description -l pl
-To jest modu³ do PAMa s³u¿±cy uwierzytelnianiu u¿ytkowników w RADIUSie.
+To jest modu³ do PAM s³u¿±cy uwierzytelnianiu u¿ytkowników w RADIUSie.
 Pozwala ka¿dej maszynie korzystaj±cej z PAMa zostaæ klientem RADIUSa w
 celach uwierzytelniania u¿ytkowników oraz zbierania statystyk logowañ
 (accounting). Niezbêdny do niego jest serwer RADIUS ¿eby móc dokonaæ
