@@ -1,6 +1,6 @@
 %define 	modulename	pam_radius
 Summary:	PAM module - authenticate using RADIUS server
-Summary(pl):	Modu³ PAM pozwalaj±cy na u¿ycie serwera RADIUS do uwierzytelniania
+Summary(pl.UTF-8):   ModuÅ‚ PAM pozwalajÄ…cy na uÅ¼ycie serwera RADIUS do uwierzytelniania
 Name:		pam-%{modulename}_auth
 Version:	1.3.16
 Release:	1
@@ -19,12 +19,12 @@ PAM-capable machine to become a RADIUS client for authentication and
 accounting requests. You will need a RADIUS server to perform the
 actual authentication.
 
-%description -l pl
-To jest modu³ do PAM s³u¿±cy uwierzytelnianiu u¿ytkowników wzglêdem
-serwera RADIUS. Pozwala ka¿dej maszynie korzystaj±cej z PAM zostaæ
-klientem us³ugi RADIUS w celach uwierzytelniania u¿ytkowników oraz
-zbierania statystyk logowañ (accounting). Do dokonania samego
-uwierzytelnienia niezbêdny jest serwer RADIUS.
+%description -l pl.UTF-8
+To jest moduÅ‚ do PAM sÅ‚uÅ¼Ä…cy uwierzytelnianiu uÅ¼ytkownikÃ³w wzglÄ™dem
+serwera RADIUS. Pozwala kaÅ¼dej maszynie korzystajÄ…cej z PAM zostaÄ‡
+klientem usÅ‚ugi RADIUS w celach uwierzytelniania uÅ¼ytkownikÃ³w oraz
+zbierania statystyk logowaÅ„ (accounting). Do dokonania samego
+uwierzytelnienia niezbÄ™dny jest serwer RADIUS.
 
 %prep
 %setup -q -n %{modulename}-%{version}
