@@ -2,13 +2,13 @@
 Summary:	PAM module to authenticate using RADIUS server
 Summary(pl.UTF-8):	Moduł PAM pozwalający na użycie serwera RADIUS do uwierzytelniania
 Name:		pam-%{modulename}_auth
-Version:	1.4.0
+Version:	3.0.0
 Release:	1
 License:	GPL
 Group:		Networking
 Source0:	ftp://ftp.freeradius.org/pub/radius/%{modulename}-%{version}.tar.gz
-# Source0-md5:	80960fdc9b720677dbb51d17311664a0
-URL:		http://www.freeradius.org/pam_radius_auth/
+# Source0-md5:	639e9a17e920c7825c0782d3148f0b9f
+URL:		https://www.freeradius.org/sub_projects/
 BuildRequires:	pam-devel > 0.77.3-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changelog LICENSE README.rst TODO USAGE
+%doc Changelog README.md TODO USAGE
 # dir shared with server package
 %dir %{_sysconfdir}/raddb
 %attr(640,root,root) %config(noreplace) %{_sysconfdir}/raddb/server
